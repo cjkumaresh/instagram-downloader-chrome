@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "instagram downloader",
+  "description": "This extension is to download images/videos from instagram",
+  "version": "1.0",
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+     "matches":    ["*://*.instagram.com/*"],
+     "js":         ["content.js"],
+     "all_frames": false
+   }],
+
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
