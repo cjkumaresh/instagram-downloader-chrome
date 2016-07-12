@@ -13,7 +13,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, response) {
         urls = [];
     if (msg.from === 'popup') {
         if (msg.subject === 'instagramImages') {
-            if (document.querySelectorAll('._n3cp9 ._icyx7') !== []) {
+            if (document.querySelectorAll('._n3cp9 ._icyx7').length === 1) {
                 instagramImageClassName = '._n3cp9 ' + instagramImageClassName;
             }
             Array.prototype.forEach.call(document.querySelectorAll(instagramImageClassName), function(el, i) {
